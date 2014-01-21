@@ -1,0 +1,15 @@
+/* =========================================
+ * 
+ * 
+ * ==========================================
+ */
+ 
+  syllableList  
+  lattice
+  filename
+  
+  lm  ngram_model_t see test_lm_read.c
+  P(O)  dag->norm  ==> {  const char* id_document;  
+  
+                                    }
+  

@@ -1,0 +1,18 @@
+声学模型训练数据来源：TDT3 Broadcast News Mandarin Corpus
+语音数据格式：单通道 采样率16kHz 量化16bit
+
+声学模型定义文件mdef参数说明：
+n_base 音素数目，即音素表中的内容；
+n_tri 三音子数目
+n_state_map HMM状态总数，包括非发射状态
+n_tied_state 状态绑定后的HMM状态总数，不包括非发射状态
+n_tied_ci_state 状态绑定后的上下文无关，即音素数目个模型包含的HMM状态数，不包括非发射状态
+n_tied_tmat 状态转移矩阵数量
+
+base 核心音素
+lft 上文 rt 下文
+p 表示三音子音素位置：s single  b begin e end i internal
+attrib 属性： filler 非语音  n/a 语音
+
+state id's 状态标识 由 0 开始  N 表示非发射状态
+
