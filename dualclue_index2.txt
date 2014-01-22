@@ -1,0 +1,694 @@
+# Words: 415
+WORD#0 a (0)
+WORD#1 ai (0)
+WORD#2 an (0)
+WORD#3 ang (0)
+WORD#4 ao (0)
+WORD#5 ba (0)
+WORD#6 bai (0)
+WORD#7 ban (0)
+WORD#8 bang (0)
+WORD#9 bao (0)
+WORD#10 bei (0)
+WORD#11 ben (0)
+WORD#12 beng (0)
+WORD#13 bian (1)
+POS #2
+(-39386, f_CCTVNews_20110921_1.wav)
+WORD#14 biao (0)
+WORD#15 bi (0)
+WORD#16 bie (0)
+WORD#17 bin (0)
+WORD#18 bing (1)
+POS #2
+(-47489, f_CCTVNews_20110921_1.wav)
+WORD#19 bo (0)
+WORD#20 bu (0)
+WORD#21 ca (0)
+WORD#22 cai (0)
+WORD#23 can (0)
+WORD#24 cang (0)
+WORD#25 cao (0)
+WORD#26 ce (0)
+WORD#27 cen (0)
+WORD#28 ceng (0)
+WORD#29 cha (0)
+WORD#30 chai (0)
+WORD#31 chan (0)
+WORD#32 chang (0)
+WORD#33 chao (0)
+WORD#34 che (0)
+WORD#35 chen (0)
+WORD#36 cheng (0)
+WORD#37 chi (0)
+WORD#38 chong (0)
+WORD#39 chou (0)
+WORD#40 chuai (0)
+WORD#41 chuan (0)
+WORD#42 chuang (0)
+WORD#43 chu (1)
+POS #6
+(-45935, f_CCTVNews_20110921_1.wav)
+WORD#44 chui (0)
+WORD#45 chun (0)
+WORD#46 chuo (0)
+WORD#47 ci (0)
+WORD#48 cong (0)
+WORD#49 cou (0)
+WORD#50 cuan (0)
+WORD#51 cu (0)
+WORD#52 cui (0)
+WORD#53 cun (0)
+WORD#54 cuo (0)
+WORD#55 da (1)
+POS #7
+(-71809, f_CCTVNews_20110921_1.wav)
+WORD#56 dai (1)
+POS #5
+(-42370, f_CCTVNews_20110921_1.wav)
+WORD#57 dan (0)
+WORD#58 dang (0)
+WORD#59 dao (0)
+WORD#60 de (3)
+POS #5
+(-286, f_CCTVNews_20110921_1.wav)
+POS #8
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #9
+(-31707, f_CCTVNews_20110921_1.wav)
+WORD#61 dei (0)
+WORD#62 den (0)
+WORD#63 deng (0)
+WORD#64 dia (0)
+WORD#65 dian (1)
+POS #2
+(-57198, f_CCTVNews_20110921_1.wav)
+WORD#66 diao (0)
+WORD#67 di (1)
+POS #1
+(-49552, f_CCTVNews_20110921_1.wav)
+WORD#68 die (0)
+WORD#69 ding (4)
+POS #2
+(-32754, f_CCTVNews_20110921_1.wav)
+POS #8
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #9
+(-74072, f_CCTVNews_20110921_1.wav)
+POS #10
+(-93923, f_CCTVNews_20110921_1.wav)
+WORD#70 diu (0)
+WORD#71 dou (0)
+WORD#72 duan (0)
+WORD#73 du (0)
+WORD#74 dui (3)
+POS #8
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #9
+(-69733, f_CCTVNews_20110921_1.wav)
+POS #10
+(-109774, f_CCTVNews_20110921_1.wav)
+WORD#75 dun (0)
+WORD#76 duo (0)
+WORD#77 e (0)
+WORD#78 ei (0)
+WORD#79 en (0)
+WORD#80 eng (0)
+WORD#81 er (0)
+WORD#82 fa (0)
+WORD#83 fan (0)
+WORD#84 fang (0)
+WORD#85 fei (0)
+WORD#86 fen (0)
+WORD#87 feng (0)
+WORD#88 fo (0)
+WORD#89 fou (0)
+WORD#90 fu (0)
+WORD#91 ga (0)
+WORD#92 gai (0)
+WORD#93 gan (0)
+WORD#94 gang (0)
+WORD#95 gao (0)
+WORD#96 ge (0)
+WORD#97 gei (0)
+WORD#98 gen (0)
+WORD#99 geng (0)
+WORD#100 gong (0)
+WORD#101 gou (0)
+WORD#102 gua (0)
+WORD#103 guai (0)
+WORD#104 guang (0)
+WORD#105 guan (0)
+WORD#106 gu (0)
+WORD#107 gui (0)
+WORD#108 gun (0)
+WORD#109 guo (0)
+WORD#110 ha (0)
+WORD#111 hai (0)
+WORD#112 hang (0)
+WORD#113 han (0)
+WORD#114 hao (1)
+POS #16
+(-29359, f_CCTVNews_20110921_1.wav)
+WORD#115 he (0)
+WORD#116 hei (0)
+WORD#117 heng (0)
+WORD#118 hen (0)
+WORD#119 hong (0)
+WORD#120 hou (0)
+WORD#121 hua (0)
+WORD#122 huai (0)
+WORD#123 huang (0)
+WORD#124 huan (0)
+WORD#125 hu (0)
+WORD#126 hui (0)
+WORD#127 hun (0)
+WORD#128 huo (0)
+WORD#129 jia (0)
+WORD#130 jiang (0)
+WORD#131 jian (3)
+POS #1
+(-52624, f_CCTVNews_20110921_1.wav)
+POS #2
+(-46606, f_CCTVNews_20110921_1.wav)
+POS #14
+(-73983, f_CCTVNews_20110921_1.wav)
+WORD#132 jiao (5)
+POS #12
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #13
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #14
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #15
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #16
+(-25741, f_CCTVNews_20110921_1.wav)
+WORD#133 jie (3)
+POS #1
+(-45159, f_CCTVNews_20110921_1.wav)
+POS #2
+(-45957, f_CCTVNews_20110921_1.wav)
+POS #3
+(-68, f_CCTVNews_20110921_1.wav)
+WORD#134 ji (1)
+POS #2
+(-19761, f_CCTVNews_20110921_1.wav)
+WORD#135 jing (2)
+POS #1
+(-19838, f_CCTVNews_20110921_1.wav)
+POS #2
+(-48882, f_CCTVNews_20110921_1.wav)
+WORD#136 jin (2)
+POS #1
+(-3576, f_CCTVNews_20110921_1.wav)
+POS #2
+(-29159, f_CCTVNews_20110921_1.wav)
+WORD#137 jiong (0)
+WORD#138 jiu (0)
+WORD#139 juan (0)
+WORD#140 jue (0)
+WORD#141 ju (1)
+POS #1
+(-59440, f_CCTVNews_20110921_1.wav)
+WORD#142 jun (2)
+POS #1
+(-70685, f_CCTVNews_20110921_1.wav)
+POS #2
+(-57250, f_CCTVNews_20110921_1.wav)
+WORD#143 kai (0)
+WORD#144 ka (0)
+WORD#145 kang (0)
+WORD#146 kan (0)
+WORD#147 kao (0)
+WORD#148 ke (0)
+WORD#149 keng (0)
+WORD#150 ken (0)
+WORD#151 kong (0)
+WORD#152 kou (0)
+WORD#153 kuai (0)
+WORD#154 kua (0)
+WORD#155 kuang (0)
+WORD#156 kuan (0)
+WORD#157 kui (0)
+WORD#158 ku (0)
+WORD#159 kun (0)
+WORD#160 kuo (0)
+WORD#161 lai (3)
+POS #8
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #9
+(-74704, f_CCTVNews_20110921_1.wav)
+POS #10
+(-137818, f_CCTVNews_20110921_1.wav)
+WORD#162 la (0)
+WORD#163 lang (0)
+WORD#164 lan (0)
+WORD#165 lao (1)
+POS #16
+(-43059, f_CCTVNews_20110921_1.wav)
+WORD#166 lei (3)
+POS #8
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #9
+(-81638, f_CCTVNews_20110921_1.wav)
+POS #10
+(-100995, f_CCTVNews_20110921_1.wav)
+WORD#167 le (0)
+WORD#168 leng (0)
+WORD#169 lia (0)
+WORD#170 liang (5)
+POS #7
+(-55047, f_CCTVNews_20110921_1.wav)
+POS #12
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #13
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #14
+(-45692, f_CCTVNews_20110921_1.wav)
+POS #16
+(-46128, f_CCTVNews_20110921_1.wav)
+WORD#171 lian (0)
+WORD#172 liao (6)
+POS #7
+(-58077, f_CCTVNews_20110921_1.wav)
+POS #12
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #13
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #14
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #15
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #16
+(-18958, f_CCTVNews_20110921_1.wav)
+WORD#173 lie (0)
+WORD#174 li (1)
+POS #1
+(-50818, f_CCTVNews_20110921_1.wav)
+WORD#175 ling (5)
+POS #1
+(-61237, f_CCTVNews_20110921_1.wav)
+POS #2
+(-49510, f_CCTVNews_20110921_1.wav)
+POS #8
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #9
+(-60953, f_CCTVNews_20110921_1.wav)
+POS #10
+(-71453, f_CCTVNews_20110921_1.wav)
+WORD#176 lin (1)
+POS #10
+(-125257, f_CCTVNews_20110921_1.wav)
+WORD#177 liu (0)
+WORD#178 long (0)
+WORD#179 lou (0)
+WORD#180 luan (0)
+WORD#181 lu (0)
+WORD#182 lun (0)
+WORD#183 luo (0)
+WORD#184 lve (0)
+WORD#185 lv (1)
+POS #14
+(-79558, f_CCTVNews_20110921_1.wav)
+WORD#186 mai (0)
+WORD#187 ma (0)
+WORD#188 mang (0)
+WORD#189 man (0)
+WORD#190 mao (0)
+WORD#191 mei (0)
+WORD#192 me (0)
+WORD#193 meng (0)
+WORD#194 men (0)
+WORD#195 mian (0)
+WORD#196 miao (0)
+WORD#197 mie (0)
+WORD#198 mi (0)
+WORD#199 ming (0)
+WORD#200 min (1)
+POS #1
+(-86508, f_CCTVNews_20110921_1.wav)
+WORD#201 miu (0)
+WORD#202 mo (0)
+WORD#203 mou (0)
+WORD#204 mu (1)
+POS #4
+(0, f_CCTVNews_20110921_1.wav)
+WORD#205 nai (0)
+WORD#206 na (0)
+WORD#207 nang (0)
+WORD#208 nan (0)
+WORD#209 nao (0)
+WORD#210 nei (3)
+POS #8
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #9
+(-574, f_CCTVNews_20110921_1.wav)
+POS #10
+(-91950, f_CCTVNews_20110921_1.wav)
+WORD#211 ne (0)
+WORD#212 neng (0)
+WORD#213 nen (0)
+WORD#214 niang (0)
+WORD#215 nian (1)
+POS #2
+(-26583, f_CCTVNews_20110921_1.wav)
+WORD#216 niao (0)
+WORD#217 nie (0)
+WORD#218 ning (2)
+POS #9
+(-73884, f_CCTVNews_20110921_1.wav)
+POS #10
+(-98700, f_CCTVNews_20110921_1.wav)
+WORD#219 ni (1)
+POS #1
+(-65462, f_CCTVNews_20110921_1.wav)
+WORD#220 nin (0)
+WORD#221 niu (0)
+WORD#222 nong (0)
+WORD#223 nou (0)
+WORD#224 nuan (0)
+WORD#225 nu (0)
+WORD#226 nuo (0)
+WORD#227 nve (0)
+WORD#228 nv (0)
+WORD#229 o (0)
+WORD#230 ou (0)
+WORD#231 pai (0)
+WORD#232 pang (0)
+WORD#233 pan (0)
+WORD#234 pao (0)
+WORD#235 pa (0)
+WORD#236 pei (0)
+WORD#237 peng (0)
+WORD#238 pen (0)
+WORD#239 pian (1)
+POS #2
+(-48197, f_CCTVNews_20110921_1.wav)
+WORD#240 piao (0)
+WORD#241 pie (0)
+WORD#242 ping (0)
+WORD#243 pin (0)
+WORD#244 pi (0)
+WORD#245 po (0)
+WORD#246 pou (0)
+WORD#247 pu (0)
+WORD#248 qiang (0)
+WORD#249 qian (0)
+WORD#250 qiao (0)
+WORD#251 qia (0)
+WORD#252 qie (0)
+WORD#253 qing (1)
+POS #1
+(-62115, f_CCTVNews_20110921_1.wav)
+WORD#254 qin (0)
+WORD#255 qiong (0)
+WORD#256 qi (1)
+POS #1
+(-54361, f_CCTVNews_20110921_1.wav)
+WORD#257 qiu (0)
+WORD#258 quan (0)
+WORD#259 que (0)
+WORD#260 qun (0)
+WORD#261 qu (0)
+WORD#262 rang (0)
+WORD#263 ran (0)
+WORD#264 rao (0)
+WORD#265 reng (0)
+WORD#266 ren (3)
+POS #8
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #9
+(-56165, f_CCTVNews_20110921_1.wav)
+POS #10
+(-59304, f_CCTVNews_20110921_1.wav)
+WORD#267 re (0)
+WORD#268 ri (3)
+POS #8
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #9
+(-77193, f_CCTVNews_20110921_1.wav)
+POS #10
+(-141075, f_CCTVNews_20110921_1.wav)
+WORD#269 rong (1)
+POS #10
+(-37, f_CCTVNews_20110921_1.wav)
+WORD#270 rou (0)
+WORD#271 ruan (0)
+WORD#272 rui (0)
+WORD#273 run (0)
+WORD#274 ruo (0)
+WORD#275 ru (0)
+WORD#276 sai (0)
+WORD#277 sang (0)
+WORD#278 san (0)
+WORD#279 sao (0)
+WORD#280 sa (0)
+WORD#281 seng (0)
+WORD#282 sen (0)
+WORD#283 se (0)
+WORD#284 shai (0)
+WORD#285 shang (0)
+WORD#286 shan (0)
+WORD#287 shao (0)
+WORD#288 sha (0)
+WORD#289 shei (0)
+WORD#290 sheng (0)
+WORD#291 shen (0)
+WORD#292 she (0)
+WORD#293 shi (0)
+WORD#294 shou (0)
+WORD#295 shuai (0)
+WORD#296 shuang (0)
+WORD#297 shuan (0)
+WORD#298 shua (0)
+WORD#299 shui (0)
+WORD#300 shun (0)
+WORD#301 shuo (0)
+WORD#302 shu (0)
+WORD#303 si (0)
+WORD#304 song (0)
+WORD#305 sou (0)
+WORD#306 suan (0)
+WORD#307 sui (0)
+WORD#308 sun (0)
+WORD#309 suo (0)
+WORD#310 su (0)
+WORD#311 tai (0)
+WORD#312 tang (0)
+WORD#313 tan (0)
+WORD#314 tao (0)
+WORD#315 ta (0)
+WORD#316 tei (0)
+WORD#317 teng (0)
+WORD#318 te (0)
+WORD#319 tian (1)
+POS #2
+(-6532, f_CCTVNews_20110921_1.wav)
+WORD#320 tiao (0)
+WORD#321 tie (0)
+WORD#322 ting (0)
+WORD#323 ti (0)
+WORD#324 tong (0)
+WORD#325 tou (0)
+WORD#326 tuan (0)
+WORD#327 tui (0)
+WORD#328 tun (0)
+WORD#329 tuo (0)
+WORD#330 tu (0)
+WORD#331 wai (0)
+WORD#332 wang (0)
+WORD#333 wan (0)
+WORD#334 wa (0)
+WORD#335 wei (4)
+POS #8
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #9
+(-83690, f_CCTVNews_20110921_1.wav)
+POS #10
+(-103306, f_CCTVNews_20110921_1.wav)
+POS #14
+(-87264, f_CCTVNews_20110921_1.wav)
+WORD#336 weng (0)
+WORD#337 wen (2)
+POS #9
+(-74014, f_CCTVNews_20110921_1.wav)
+POS #10
+(-99747, f_CCTVNews_20110921_1.wav)
+WORD#338 wo (0)
+WORD#339 wu (1)
+POS #11
+(-55662, f_CCTVNews_20110921_1.wav)
+WORD#340 xiang (0)
+WORD#341 xian (0)
+WORD#342 xiao (0)
+WORD#343 xia (0)
+WORD#344 xie (1)
+POS #3
+(-49849, f_CCTVNews_20110921_1.wav)
+WORD#345 xing (0)
+WORD#346 xin (2)
+POS #1
+(-33429, f_CCTVNews_20110921_1.wav)
+POS #2
+(-57554, f_CCTVNews_20110921_1.wav)
+WORD#347 xiong (0)
+WORD#348 xiu (0)
+WORD#349 xi (1)
+POS #1
+(-46000, f_CCTVNews_20110921_1.wav)
+WORD#350 xuan (0)
+WORD#351 xue (0)
+WORD#352 xun (0)
+WORD#353 xu (0)
+WORD#354 yang (0)
+WORD#355 yan (3)
+POS #12
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #14
+(-77496, f_CCTVNews_20110921_1.wav)
+POS #16
+(-89005, f_CCTVNews_20110921_1.wav)
+WORD#356 yao (6)
+POS #7
+(-79, f_CCTVNews_20110921_1.wav)
+POS #12
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #13
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #14
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #15
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #16
+(-29908, f_CCTVNews_20110921_1.wav)
+WORD#357 ya (0)
+WORD#358 ye (2)
+POS #1
+(-63466, f_CCTVNews_20110921_1.wav)
+POS #14
+(-84486, f_CCTVNews_20110921_1.wav)
+WORD#359 ying (2)
+POS #1
+(-50432, f_CCTVNews_20110921_1.wav)
+POS #2
+(-27354, f_CCTVNews_20110921_1.wav)
+WORD#360 yin (2)
+POS #1
+(-44073, f_CCTVNews_20110921_1.wav)
+POS #2
+(-58558, f_CCTVNews_20110921_1.wav)
+WORD#361 yi (3)
+POS #1
+(-29088, f_CCTVNews_20110921_1.wav)
+POS #2
+(-34581, f_CCTVNews_20110921_1.wav)
+POS #14
+(-47350, f_CCTVNews_20110921_1.wav)
+WORD#362 yong (0)
+WORD#363 you (5)
+POS #12
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #13
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #14
+(-35020, f_CCTVNews_20110921_1.wav)
+POS #15
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #16
+(-4359, f_CCTVNews_20110921_1.wav)
+WORD#364 yuan (3)
+POS #12
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #14
+(-77411, f_CCTVNews_20110921_1.wav)
+POS #16
+(-82570, f_CCTVNews_20110921_1.wav)
+WORD#365 yue (1)
+POS #14
+(-78302, f_CCTVNews_20110921_1.wav)
+WORD#366 yun (1)
+POS #14
+(-98343, f_CCTVNews_20110921_1.wav)
+WORD#367 yu (1)
+POS #14
+(-67666, f_CCTVNews_20110921_1.wav)
+WORD#368 zai (1)
+POS #5
+(-42807, f_CCTVNews_20110921_1.wav)
+WORD#369 zang (0)
+WORD#370 zan (0)
+WORD#371 zao (0)
+WORD#372 zao (0)
+WORD#373 za (0)
+WORD#374 zei (0)
+WORD#375 zei (0)
+WORD#376 zeng (0)
+WORD#377 zen (0)
+WORD#378 ze (0)
+WORD#379 zhai (0)
+WORD#380 zhang (0)
+WORD#381 zhan (0)
+WORD#382 zhao (0)
+WORD#383 zha (0)
+WORD#384 zhei (0)
+WORD#385 zheng (0)
+WORD#386 zhen (0)
+WORD#387 zhe (0)
+WORD#388 zhi (0)
+WORD#389 zhong (0)
+WORD#390 zhou (0)
+WORD#391 zhuai (0)
+WORD#392 zhuang (0)
+WORD#393 zhuan (0)
+WORD#394 zhua (0)
+WORD#395 zhui (0)
+WORD#396 zhun (0)
+WORD#397 zhuo (0)
+WORD#398 zhu (1)
+POS #6
+(-101, f_CCTVNews_20110921_1.wav)
+WORD#399 zi (0)
+WORD#400 zong (0)
+WORD#401 zou (0)
+WORD#402 zuan (0)
+WORD#403 zui (0)
+WORD#404 zun (0)
+WORD#405 zuo (0)
+WORD#406 zu (0)
+WORD#407 <s> (1)
+POS #0
+(0, f_CCTVNews_20110921_1.wav)
+WORD#408 </s> (0)
+WORD#409 <sil> (6)
+POS #9
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #10
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #13
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #14
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #15
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #16
+(-1073041032, f_CCTVNews_20110921_1.wav)
+WORD#410 ++laugh++ (0)
+WORD#411 ++lipsmack++ (0)
+WORD#412 ++cough++ (0)
+WORD#413 ++breath++ (1)
+POS #16
+(-1073041032, f_CCTVNews_20110921_1.wav)
+WORD#414 ++incomplete++ (6)
+POS #9
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #10
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #13
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #14
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #15
+(-1073041032, f_CCTVNews_20110921_1.wav)
+POS #16
+(-1073041032, f_CCTVNews_20110921_1.wav)

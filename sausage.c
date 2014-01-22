@@ -880,90 +880,6 @@ dualclue_index_t* dualclue_index_read(const char* filename)
 	fclose(fp);
 	return index;
 }
-/*
-struct dualclue_index_cache_s {
-	int n_word;
-	int* n_pos;
-	char** word_list;
-	s_hit_t*** s_hits;
-};
-
-s_hit_t** dualclue_index_cache_get_element(dualclue_index_cache_t* cache, int i, int j)
-{
-	// i [0, n_word) ; j [0, n_pos[i])
-	int k;
-	int c = 0;
-	for ( k = 0; k < i; k++) {
-		c = c + cache->n_pos[k];
-	} 
-	c += j;
-	return ((s_hit_t**)(cache->s_hits) + c);	
-}
-
-dualclue_index_cache_t* dualclue_index_get_cache(dualclue_index_t* index)
-{
-	if (!index) {
-		return NULL;
-	}
-	dualclue_index_cache_t* cache = (dualclue_index_cache_t*) calloc(1, sizeof(dualclue_index_cache_t));
-	cache->n_word = index->n_word;
-	cache->word_list = index->word_list;
-	cache->n_pos = (int*) calloc(cache->n_word, sizeof(int));
-	cache->s_hits = (s_hit_t***) calloc(cache->n_word, sizeof(s_hit_t**));
-	int i, j;
-	int c;
-	int n_pos;
-	for (i = 0; i < index->n_word; i++) {
-		cache->n_pos[i] = index->s_hits[i].n_pos;
-		cache->s_hits[i] = (s_hit_t**) calloc(cache->n_pos[i], sizeof(s_hit_t*));
-	}
-	s_hit_t** tmp;
-	s_hits_pos_t* hits_pos;
-	for (i = 0; i < index->n_word; i++) {
-		for (j = 0; j < cache->n_pos[i]; j++) {
-			tmp = dualclue_index_cache_get_element(cache, i, j);
-			hits_pos = s_hits_word_get_pos( &(index->s_hits[i]), j);
-			if (hits_pos) 			
-				*tmp = hits_pos->first;
-			else
-				*tmp = NULL;
-		}
-	}
-	return cache;
-}
-
-void dualclue_index_cache_write(dualclue_index_cache_t* cache, const char* filename)
-{
-	FILE* fp;
-	if ( (fp = fopen(filename, "w")) == NULL) {
-		perror("dualclue_index_cache_write: BAD filename");
-		return;
-	}
-	
-	fprintf(fp, "# Words: %d\n", cache->n_word);
-	s_hit_t** hits_pos;
-	s_hit_t* hit;
-	int i, j;
-    for (i = 0; i < cache->n_word; i++) {
-		fprintf(fp, "WORD#%d %s (%d)\n", i, cache->word_list[i], cache->n_pos[i]);
-		for (j = 0; j < cache->n_pos[i]; j++) {
-			hits_pos = dualclue_index_cache_get_element(cache, i, j);
-			if (*hits_pos) {
-				fprintf(fp, "POS #%d\n", j);
-				hit = *hits_pos;
-				while(hit) {
-					fprintf(fp, "(%d, %s)\n", hit->post, hit->uttid);
-					hit = hit->next;
-				}
-			}
-		}
-		
-    }
-	
-	fclose(fp);
-}
-
-*/
 
 /**
  * s_partial_path_t
@@ -973,6 +889,7 @@ typedef struct s_partial_path_s {
     s_hit_t* last_term;
     int n_term;
 	int pos;
+	int32 post;
     struct s_partial_path_s *next;
 } s_partial_path_t;
 
@@ -993,7 +910,7 @@ s_partial_path_t* s_partial_path_init() {
     return p;
 }
 
-/** Finitialize a path */ 
+/** Finalize a path */ 
 void s_partial_path_free(s_partial_path_t* p) 
 {
     if (p) {
@@ -1050,6 +967,7 @@ s_partial_path_t* s_partial_path_copy(s_partial_path_t* p) {
                 return NULL;
             }
        }
+	   out->post = p->post;
        out->next = NULL;
        return out;
 }
@@ -1119,6 +1037,49 @@ void s_path_queue_add(s_path_queue_t* q, s_partial_path_t* p) {
     q->n_path++;
 }
 
+void s_path_queue_print(s_path_queue_t* q)
+{
+	s_partial_path_t *p;
+	printf("#PATH:%d\n", q->n_path);
+	for (p = q->head; p; p = p->next) {
+			printf("%s %d\n", p->first_term->uttid, p->post);
+		}
+}
+		
+void s_path_queue_sort(s_path_queue_t** q)
+{
+	s_path_queue_t* q_sorted = s_path_queue_init();
+	s_path_queue_add(q_sorted, s_partial_path_copy((*q)->head)); 
+	//s_path_queue_print(q_sorted);
+	s_partial_path_t *i, *j, *j_prev;
+	for (i = (*q)->head->next; i; i = i->next) {
+		for (j = q_sorted->head; j; j = j->next) {
+			if ( i->post > j->post) {
+				s_partial_path_t *new_i = s_partial_path_copy(i);
+				if ( j == q_sorted->head) {					
+					q_sorted->head = new_i;					
+				} else {
+					j_prev->next = new_i;
+				}
+				new_i->next = j;
+				q_sorted->n_path++;
+				break;
+			} else {
+				j_prev = j;
+			}
+		}
+		// add to the tail
+		if ( j_prev == q_sorted->tail) {
+			s_path_queue_add(q_sorted, s_partial_path_copy(i)); 
+		}
+		//s_path_queue_print(q_sorted);
+	}
+	
+	s_path_queue_free(*q);
+	*q = q_sorted; 
+}
+
+
 void dualclue_index_search(dualclue_index_t* index, char** terms, int n_term)
 {
 	int i;
@@ -1139,6 +1100,7 @@ void dualclue_index_search(dualclue_index_t* index, char** terms, int n_term)
 			s_partial_path_t* p = s_partial_path_init();
 			s_partial_path_extend(p, hit);
 			p->pos = hits_pos->pos;
+			p->post = s_partial_path_get_posterior(p);
 			s_path_queue_add(queues[0], p);
 			hit = hit->next;
 		}
@@ -1161,6 +1123,7 @@ void dualclue_index_search(dualclue_index_t* index, char** terms, int n_term)
 					s_partial_path_t* q = s_partial_path_copy(p);
 					s_partial_path_extend(q, hit);
 					q->pos = hits_pos->pos;
+					q->post = s_partial_path_get_posterior(q);
 					s_path_queue_add(queues[i], q);
 				}
 				hit = hit->next;
@@ -1169,10 +1132,9 @@ void dualclue_index_search(dualclue_index_t* index, char** terms, int n_term)
 	}
 	
 	if ( i == n_term) {
-		s_partial_path_t* p;
-		for (p = queues[n_term-1]->head; p; p = p->next) {
-			printf("%s %d\n", p->first_term->uttid, s_partial_path_get_posterior(p));
-		}
+		s_partial_path_t* p;		
+		s_path_queue_sort(&(queues[n_term-1]));
+		s_path_queue_print(queues[n_term-1]);
 	}
 	
 exit:

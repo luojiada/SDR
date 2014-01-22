@@ -47,6 +47,7 @@ typedef struct partial_path_s {
     hit_t* first_term;
     hit_t* last_term;
     int n_term;
+	int32 post;
     struct partial_path_s *next;
 } partial_path_t;
 
@@ -183,6 +184,7 @@ partial_path_t* partial_path_copy(partial_path_t* p) {
                 return NULL;
             }
        }
+	   out->post = p->post;
        out->next = NULL;
        return out;
 }
@@ -217,16 +219,16 @@ int32 partial_path_get_posterior(partial_path_t* p, ngram_model_t* lm, float32 a
 }
 
 
-void partial_path_print(partial_path_t* p, ngram_model_t* lm, float32 ascale)
+void partial_path_print(partial_path_t* p)
 {
     if (!p)
         return;
     hit_t* h;
-    printf("[%.2f-%.2f] ", p->first_term->start_time, p->last_term->end_time);
+    printf("%s[%.2f-%.2f] ", p->first_term->uttid, p->first_term->start_time, p->last_term->end_time);
     for (h = p->first_term; h; h = h->next) {
         printf("%s ", h->word);
     }
-    printf("%d\n", partial_path_get_posterior(p, lm, ascale));
+    printf("%d\n", p->post);
 }
 
 /* =====================================================================
@@ -254,12 +256,13 @@ void path_queue_free(path_queue_t* q)
     free(q);    
 }
 
-void path_queue_print(path_queue_t* q, ngram_model_t* lm, float32 ascale) {
+void path_queue_print(path_queue_t* q)
+{
     if(!q)
         return;
     partial_path_t* p = q->head;
     while (p) {
-        partial_path_print(p, lm, ascale);
+        partial_path_print(p);
         p = p->next;
     }
 }
@@ -291,6 +294,40 @@ void path_queue_add(path_queue_t* q, partial_path_t* p) {
     }
     q->n_path++;
 }
+
+void path_queue_sort(path_queue_t** q)
+{
+	path_queue_t* q_sorted = path_queue_init();
+	path_queue_add(q_sorted, partial_path_copy((*q)->head)); 
+	
+	partial_path_t *i, *j, *j_prev;
+	for (i = (*q)->head->next; i; i = i->next) {
+		
+		for (j = q_sorted->head; j; j = j->next) {
+			if (i->post > j->post) {
+				partial_path_t *new_i = partial_path_copy(i);
+				if ( j == q_sorted->head) {					
+					q_sorted->head = new_i;					
+				} else {
+					j_prev->next = new_i;
+				}
+				new_i->next = j;
+				q_sorted->n_path++;
+				break;
+			} else {
+				j_prev = j;
+			}
+		}
+		// add to the tail
+		if ( j_prev == q_sorted->tail) {
+			path_queue_add(q_sorted, partial_path_copy(i)); 
+		} 
+	}
+	
+	path_queue_free(*q);
+	*q = q_sorted; 
+}
+
 /* =====================================================================
  * inverted_index's functons
  * ===================================================================== */
@@ -613,7 +650,7 @@ void inverted_index_addhits(inverted_index_t* index, const char* uttid, ps_latti
  * function: inverted_index_search()
  * Return id of utterances in which all query terms are matched 
  */ 
-void inverted_index_search(inverted_index_t* index, ngram_model_t* lm, char** terms, int n_term, result_list_t** rl)
+void inverted_index_search(inverted_index_t* index, ngram_model_t* lm, float32 ascale, char** terms, int n_term, result_list_t** rl)
 {
     if (!index) {
         perror("Index not found");
@@ -658,6 +695,7 @@ void inverted_index_search(inverted_index_t* index, ngram_model_t* lm, char** te
                         partial_path_free(q);
                         continue;
                     }
+					q->post = partial_path_get_posterior(q, lm, ascale);
                     path_queue_add(queues[k], q);              
                                                           
                 } else {
@@ -674,13 +712,14 @@ void inverted_index_search(inverted_index_t* index, ngram_model_t* lm, char** te
                                    partial_path_free(q);
                                    continue;
                                }
+							   q->post = partial_path_get_posterior(q, lm, ascale);
                                path_queue_add(queues[k], q);  
                         }
                     }                
                 }               
                 hit = hit->next;
             }
-        path_queue_print(queues[k], lm, 1.0/20.0);
+        //path_queue_print(queues[k]);
         } else {
             perror("Query term not found inside the index");
             break;
@@ -693,13 +732,8 @@ void inverted_index_search(inverted_index_t* index, ngram_model_t* lm, char** te
             /** Compare similiarity between query terms and utterances */
             int32 norm;
             printf("#result: %d\n", queues[k]->n_path);
-            /*
-            for (i = 0, p = queues[k]->head; (i < queues[k]->n_path) && p; i++, p= p->next) {
-                norm = partial_path_get_posterior(p, lm, 1.0/20.0);
-                printf("(%s, %.2f, %.2f, %d)\n", p->first_term->uttid, p->first_term->start_time, p->last_term->end_time, norm);
-            }
-            */
-            
+			path_queue_sort(&(queues[k]));
+            path_queue_print(queues[k]);            
         }
     }
     

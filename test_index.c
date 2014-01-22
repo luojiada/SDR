@@ -40,7 +40,7 @@ int main(int argc, char** argv)
 	if (hyp == NULL)
 		return 1;
 	printf("Recognized: %s\n", hyp);
-	index = inverted_index_init("./syllable.lst");
+	inverted_index_t* index = inverted_index_init("./syllable.lst");
     if (index == NULL) {
        exit(1);
     }
@@ -66,9 +66,9 @@ int main(int argc, char** argv)
     index = inverted_index_read("./index");
     inverted_index_write(index, "./index2");
     
-    char* query[] = {"jin", "tian", "jie", "mu", "de", "zhu", "yao", "nei", "rong", "you"};
+    char* query[] = {"jin", "tian", "jie", "mu"};
     result_list_t* rl;
-    inverted_index_search(index, ps_get_lmset(ps), query, 4, &rl);
+    inverted_index_search(index, ps_get_lmset(ps), 1.0/ascale, query, 4, &rl);
 
 	inverted_index_free(index);
 	return 0;

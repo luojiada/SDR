@@ -60,6 +60,6 @@ void inverted_index_addhits(inverted_index_t* index, const char* uttid, ps_latti
  * function: inverted_index_search()
  * 
  */ 
-void inverted_index_search(inverted_index_t* index, ngram_model_t* lm, char** terms, int n_term, result_list_t** rl);
+void inverted_index_search(inverted_index_t* index, ngram_model_t* lm, float32 ascale, char** terms, int n_term, result_list_t** rl);
 
 #endif

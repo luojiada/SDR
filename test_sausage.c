@@ -64,8 +64,8 @@ int main(int argc, char** argv)
 	dualclue_index_write(index, "dualclue_index2.txt");
 	
 	
-	char* query[] = {"jin", "tian", "jie", "mu", "de", "zhu", "yao", "nei", "rong", "you"};
-	dualclue_index_search(index, query, 10);
+	char* query[] = {"jie"};
+	dualclue_index_search(index, query, 1);
 	
 	
 	dualclue_index_free(index);
